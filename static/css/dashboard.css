@@ -1,0 +1,651 @@
+/* ==========================================
+   SecureNet AI IDS
+   Dashboard CSS
+========================================== */
+
+/* ---------- Main Layout ---------- */
+
+.main-content{
+
+    margin-left:260px;
+
+    min-height:100vh;
+
+    background:#F8FAFC;
+
+    transition:.3s;
+
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#0F172A;
+
+    color:white;
+
+    overflow-y:auto;
+
+    transition:.3s;
+
+    z-index:1000;
+
+    box-shadow:4px 0 15px rgba(0,0,0,.2);
+
+}
+
+.sidebar .logo{
+
+    padding:25px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar .logo i{
+
+    color:#38BDF8;
+
+    margin-right:8px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:20px 0;
+
+    margin:0;
+
+}
+
+.sidebar ul li{
+
+    margin:6px 15px;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#CBD5E1;
+
+    text-decoration:none;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.sidebar ul li a:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+    transform:translateX(6px);
+
+}
+
+.sidebar ul li a i{
+
+    width:25px;
+
+    text-align:center;
+
+}
+
+/* ---------- Topbar ---------- */
+
+.topbar{
+
+    background:white;
+
+    padding:15px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+}
+
+.left-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.menu-btn{
+
+    border:none;
+
+    background:none;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.right-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+#clock{
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+.theme-btn{
+
+    border:none;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#F1F5F9;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.theme-btn:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+/* ---------- Cards ---------- */
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+/* ---------- Statistics Cards ---------- */
+
+.stats-card{
+
+    border-radius:18px;
+
+    color:white;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+.stats-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stats-card h5{
+
+    font-size:15px;
+
+    opacity:.9;
+
+}
+
+.stats-card h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-top:8px;
+
+}
+
+.primary-card{
+
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+
+}
+
+.success-card{
+
+    background:linear-gradient(135deg,#059669,#10B981);
+
+}
+
+.danger-card{
+
+    background:linear-gradient(135deg,#DC2626,#EF4444);
+
+}
+
+.warning-card{
+
+    background:linear-gradient(135deg,#D97706,#F59E0B);
+
+}
+
+/* ---------- Tables ---------- */
+
+.table{
+
+    margin:0;
+
+}
+
+.table thead{
+
+    background:#F1F5F9;
+
+}
+
+.table thead th{
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.table tbody tr{
+
+    transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+/* ---------- Badges ---------- */
+
+.badge{
+
+    padding:8px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+/* ---------- Upload Area ---------- */
+
+.upload-box{
+
+    border:2px dashed #CBD5E1;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    background:#F8FAFC;
+
+}
+
+.upload-box:hover{
+
+    border-color:#2563EB;
+
+    background:#EFF6FF;
+
+}
+
+/* ---------- Forms ---------- */
+
+.form-control,
+
+.form-select{
+
+    height:48px;
+
+    border-radius:10px;
+
+}
+
+.form-control:focus,
+
+.form-select:focus{
+
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.2);
+
+}
+
+/* ---------- Buttons ---------- */
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+.btn-primary{
+
+    background:#2563EB;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* ---------- Progress ---------- */
+
+.progress{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    font-weight:600;
+
+}
+
+/* ---------- Profile Image ---------- */
+
+.profile-image{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #2563EB;
+
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#94A3B8;
+
+    border-radius:20px;
+
+}
+
+/* ---------- Dark Mode ---------- */
+
+body.dark{
+
+    background:#0F172A;
+
+}
+
+body.dark .main-content{
+
+    background:#111827;
+
+}
+
+body.dark .dashboard-card{
+
+    background:#1E293B;
+
+    color:white;
+
+}
+
+body.dark .topbar{
+
+    background:#1E293B;
+
+}
+
+body.dark .table{
+
+    color:white;
+
+}
+
+body.dark .table thead{
+
+    background:#334155;
+
+}
+
+body.dark .form-control,
+
+body.dark .form-select{
+
+    background:#334155;
+
+    color:white;
+
+    border:none;
+
+}
+
+body.dark .upload-box{
+
+    background:#1E293B;
+
+    border-color:#475569;
+
+}
+
+body.dark #clock{
+
+    color:white;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        left:-260px;
+
+    }
+
+    .sidebar.active{
+
+        left:0;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-card{
+
+        margin-bottom:20px;
+
+    }
+
+    .topbar{
+
+        padding:15px;
+
+    }
+
+}
+
+/* Active Sidebar Link */
+
+.sidebar a.active{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    border-radius:10px;
+
+}
+
+.sidebar a.active i{
+
+    color:#FFFFFF;
+
+}
+
+/* TEMP TEST */
+
+
+.dashboard-card canvas{
+
+    width:100% !important;
+
+    height:300px !important;
+
+}
+
+/* ==========================================
+   Information Tables
+========================================== */
+
+.info-table{
+
+    width:100% !important;
+
+    border-collapse:collapse;
+
+    margin-bottom:0;
+
+}
+
+.info-table th,
+.info-table td{
+
+    padding:14px 18px;
+
+    border-bottom:1px solid rgba(148,163,184,.15) !important;
+
+    border-top:none !important;
+
+    border-left:none !important;
+
+    border-right:none !important;
+
+}
+
+.info-table th{
+
+    width:35%;
+
+    background:rgba(51,65,85,.15);
+
+    font-weight:600;
+
+}
+
+.info-table tr:last-child th,
+.info-table tr:last-child td{
+
+    border-bottom:none !important;
+
+}

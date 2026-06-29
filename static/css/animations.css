@@ -1,0 +1,487 @@
+/* ===========================================
+   SecureNet AI IDS
+   animations.css
+=========================================== */
+
+
+/* Fade In */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* Fade Up */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Fade Down */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Fade Left */
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Fade Right */
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Scale */
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* Zoom */
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.5);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* Rotate */
+
+@keyframes rotateIn{
+
+    from{
+
+        opacity:0;
+
+        transform:rotate(-180deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:rotate(0);
+
+    }
+
+}
+
+
+/* Floating */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Pulse */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* Shake */
+
+@keyframes shake{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    25%{
+
+        transform:translateX(-5px);
+
+    }
+
+    50%{
+
+        transform:translateX(5px);
+
+    }
+
+    75%{
+
+        transform:translateX(-5px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Spinner */
+
+@keyframes spinner{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* Glow */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 5px #2563EB;
+
+    }
+
+    50%{
+
+        box-shadow:0 0 25px #2563EB;
+
+    }
+
+    100%{
+
+        box-shadow:0 0 5px #2563EB;
+
+    }
+
+}
+
+
+/* Progress */
+
+@keyframes progress{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+
+/* ===========================================
+   Utility Classes
+=========================================== */
+
+.fade-in{
+
+    animation:fadeIn .8s ease;
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.fade-down{
+
+    animation:fadeDown .8s ease;
+
+}
+
+.fade-left{
+
+    animation:fadeLeft .8s ease;
+
+}
+
+.fade-right{
+
+    animation:fadeRight .8s ease;
+
+}
+
+.scale-in{
+
+    animation:scaleIn .6s ease;
+
+}
+
+.zoom-in{
+
+    animation:zoomIn .6s ease;
+
+}
+
+.rotate-in{
+
+    animation:rotateIn .8s ease;
+
+}
+
+.float{
+
+    animation:floating 3s ease-in-out infinite;
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+.shake{
+
+    animation:shake .5s;
+
+}
+
+.glow{
+
+    animation:glow 2s infinite;
+
+}
+
+
+/* ===========================================
+   Hover Effects
+=========================================== */
+
+.hover-lift{
+
+    transition:.3s;
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.hover-scale{
+
+    transition:.3s;
+
+}
+
+.hover-scale:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+.hover-shadow{
+
+    transition:.3s;
+
+}
+
+.hover-shadow:hover{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+
+/* ===========================================
+   Loader
+=========================================== */
+
+.loader-spin{
+
+    animation:spinner 1s linear infinite;
+
+}
+
+
+/* ===========================================
+   Buttons
+=========================================== */
+
+.btn-animate{
+
+    transition:.3s;
+
+}
+
+.btn-animate:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ===========================================
+   Cards
+=========================================== */
+
+.card-animate{
+
+    animation:fadeUp .8s ease;
+
+}

@@ -1,0 +1,342 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Reports
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+
+            <h2 class="fw-bold">
+
+                Reports Center
+
+            </h2>
+
+            <p class="text-muted">
+
+                Generate and download intrusion detection reports.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SUMMARY CARDS ================= -->
+
+    <div class="row g-4">
+
+        <div class="col-lg-3">
+
+            <div class="stats-card primary-card">
+
+                <div>
+
+                    <h5>Total Predictions</h5>
+
+                    <h2>{{ total }}</h2>
+
+                </div>
+
+                <i class="fas fa-chart-line fa-3x"></i>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="stats-card success-card">
+
+                <div>
+
+                    <h5>Normal Traffic</h5>
+
+                    <h2>{{ normal }}</h2>
+
+                </div>
+
+                <i class="fas fa-shield-halved fa-3x"></i>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="stats-card danger-card">
+
+                <div>
+
+                    <h5>Attack Traffic</h5>
+
+                    <h2>{{ attack }}</h2>
+
+                </div>
+
+                <i class="fas fa-bug fa-3x"></i>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="stats-card warning-card">
+
+                <div>
+
+                    <h5>Model Accuracy</h5>
+
+                    <h2>99.86%</h2>
+
+                </div>
+
+                <i class="fas fa-award fa-3x"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= DOWNLOAD REPORTS ================= -->
+
+    <div class="row mt-5">
+
+        <div class="col-lg-4">
+
+            <div class="dashboard-card text-center">
+
+                <i class="fas fa-file-pdf fa-4x text-danger mb-3"></i>
+
+                <h4>PDF Report</h4>
+
+                <p>
+
+                    Download the complete intrusion detection report
+                    in PDF format.
+
+                </p>
+
+                <a href="/download/pdf"
+                   class="btn btn-danger">
+
+                    <i class="fas fa-download"></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="dashboard-card text-center">
+
+                <i class="fas fa-file-excel fa-4x text-success mb-3"></i>
+
+                <h4>Excel Report</h4>
+
+                <p>
+
+                    Export all prediction records to Microsoft Excel.
+
+                </p>
+
+                <a href="/download/excel"
+                   class="btn btn-success">
+
+                    <i class="fas fa-download"></i>
+
+                    Download Excel
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="dashboard-card text-center">
+
+                <i class="fas fa-file-csv fa-4x text-primary mb-3"></i>
+
+                <h4>CSV Report</h4>
+
+                <p>
+
+                    Export prediction history as CSV format.
+
+                </p>
+
+                <a href="/download/csv"
+                   class="btn btn-primary">
+
+                    <i class="fas fa-download"></i>
+
+                    Download CSV
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= MODEL INFORMATION ================= -->
+
+    <div class="dashboard-card mt-5">
+
+        <h3>
+
+            AI Model Information
+
+        </h3>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <table class="table">
+
+                    <tr>
+
+                        <th>Algorithm</th>
+
+                        <td>Random Forest Classifier</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Dataset</th>
+
+                        <td>KDD Cup 99</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Programming Language</th>
+
+                        <td>Python</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Framework</th>
+
+                        <td>Flask</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <table class="table">
+
+                    <tr>
+
+                        <th>Database</th>
+
+                        <td>SQLite</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Machine Learning</th>
+
+                        <td>Scikit-Learn</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Accuracy</th>
+
+                        <td>99.86%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Status</th>
+
+                        <td>
+
+                            <span class="badge bg-success">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= REPORT DESCRIPTION ================= -->
+
+    <div class="dashboard-card mt-4">
+
+        <h3>
+
+            Report Summary
+
+        </h3>
+
+        <hr>
+
+        <p>
+
+            This report contains all intrusion detection predictions
+            generated by the SecureNet AI IDS.
+
+        </p>
+
+        <ul>
+
+            <li>Total prediction history</li>
+
+            <li>Attack and normal traffic statistics</li>
+
+            <li>Confidence score of every prediction</li>
+
+            <li>Prediction timestamps</li>
+
+            <li>Machine learning model performance</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+{% endblock %}

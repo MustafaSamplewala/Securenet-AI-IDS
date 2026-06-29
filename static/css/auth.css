@@ -1,0 +1,331 @@
+/* ==========================================
+   SecureNet AI IDS
+   Authentication CSS
+========================================== */
+
+:root{
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+
+    --success:#10B981;
+
+    --danger:#EF4444;
+
+    --background:#0F172A;
+
+    --card-bg:rgba(255,255,255,.08);
+
+    --text:#FFFFFF;
+
+    --text-light:#CBD5E1;
+
+}
+
+/* ==========================================
+   Body
+========================================== */
+
+body{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#0F172A,#1E293B);
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   Wrapper
+========================================== */
+
+.auth-wrapper{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.auth-card{
+
+    background:var(--card-bg);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    animation:fadeUp .7s ease;
+
+}
+
+/* ==========================================
+   Logo
+========================================== */
+
+.logo-circle{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#2563EB,#38BDF8);
+
+    color:white;
+
+    font-size:40px;
+
+    box-shadow:0 0 30px rgba(37,99,235,.5);
+
+}
+
+.auth-card h2{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.auth-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================
+   Labels
+========================================== */
+
+.form-label{
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   Inputs
+========================================== */
+
+.form-control{
+
+    height:50px;
+
+    border-radius:10px;
+
+    border:none;
+
+    padding-left:15px;
+
+}
+
+.form-control:focus{
+
+    border:2px solid var(--primary);
+
+    box-shadow:0 0 12px rgba(37,99,235,.3);
+
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.btn{
+
+    border-radius:10px;
+
+    height:48px;
+
+    font-weight:600;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-success{
+
+    background:var(--success);
+
+    border:none;
+
+}
+
+.btn-success:hover{
+
+    background:#059669;
+
+}
+
+/* ==========================================
+   Links
+========================================== */
+
+a{
+
+    color:#38BDF8;
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    color:white;
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.auth-footer{
+
+    color:white;
+
+}
+
+.auth-footer a{
+
+    color:white;
+
+}
+
+.auth-footer a:hover{
+
+    color:#38BDF8;
+
+}
+
+/* ==========================================
+   Flash Messages
+========================================== */
+
+.alert{
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+   Loader
+========================================== */
+
+#loader{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+/* ==========================================
+   Animation
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+    .auth-card{
+
+        padding:25px;
+
+    }
+
+    .logo-circle{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:30px;
+
+    }
+
+    .auth-card h2{
+
+        font-size:24px;
+
+    }
+
+}
