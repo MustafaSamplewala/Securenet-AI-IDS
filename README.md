@@ -1,4 +1,3 @@
-# Securenet-AI-IDS
 
 # 🛡️ SecureNet AI IDS
 ### AI-Powered Intrusion Detection System using Machine Learning
